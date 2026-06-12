@@ -1,0 +1,483 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the picpocket.brennoflavio package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: picpocket.brennoflavio\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-15 04:26+0000\n"
+"PO-Revision-Date: 2026-05-31 12:01+0000\n"
+"Last-Translator: Serhii Horichenko <serhii@horichenko.com>\n"
+"Language-Team: Ukrainian <https://hosted.weblate.org/projects/ubports/"
+"picpocket/uk/>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 2026.6.dev0\n"
+
+#: ../qml/AlbumDetailPage.qml:33
+msgid "Album"
+msgstr "Альбом"
+
+#: ../qml/AlbumDetailPage.qml:50
+msgid "Loading album photos..."
+msgstr "Завантаження фото альбому..."
+
+#: ../qml/AlbumDetailPage.qml:84
+msgid "Error loading album"
+msgstr "Помилка завантаження альбому"
+
+#: ../qml/AlbumDetailPage.qml:127
+msgid "Delete Album"
+msgstr "Видалити альбом"
+
+#: ../qml/AlbumDetailPage.qml:133
+msgid "Deleting album..."
+msgstr "Видалення альбому..."
+
+#: ../qml/AlbumDetailPage.qml:144 ../qml/AlbumsPage.qml:155
+#: ../qml/ArchivedPage.qml:132 ../qml/DeletedPhotosPage.qml:132
+#: ../qml/FavoritesPage.qml:132 ../qml/GalleryPage.qml:207
+#: ../qml/LocationsPage.qml:86 ../qml/PeoplePage.qml:86
+msgid "Refresh"
+msgstr "Оновити"
+
+#: ../qml/AlbumDetailPage.qml:157
+msgid "Remove from Album"
+msgstr "Вилучення з альбому"
+
+#: ../qml/AlbumDetailPage.qml:163
+msgid "Removing from album..."
+msgstr "Вилучення з альбому..."
+
+#: ../qml/AlbumDetailPage.qml:181 ../qml/FavoritesPage.qml:164
+#: ../qml/GalleryPage.qml:239 ../qml/LocationDetailPage.qml:143
+#: ../qml/PersonDetailPage.qml:156 ../qml/PhotoDetail.qml:227
+#: ../qml/SearchPage.qml:227
+msgid "Archive"
+msgstr "Архів"
+
+#: ../qml/AlbumDetailPage.qml:187 ../qml/FavoritesPage.qml:170
+#: ../qml/GalleryPage.qml:245 ../qml/LocationDetailPage.qml:149
+#: ../qml/PersonDetailPage.qml:162 ../qml/SearchPage.qml:233
+msgid "Archiving photos..."
+msgstr "Архівування фото..."
+
+#: ../qml/AlbumDetailPage.qml:205 ../qml/ArchivedPage.qml:169
+#: ../qml/FavoritesPage.qml:188 ../qml/GalleryPage.qml:263
+#: ../qml/LibraryPage.qml:46 ../qml/LibraryPage.qml:70
+#: ../qml/LocationDetailPage.qml:167 ../qml/PersonDetailPage.qml:180
+#: ../qml/PhotoDetail.qml:241 ../qml/SearchPage.qml:251
+msgid "Trash"
+msgstr "Смітник"
+
+#: ../qml/AlbumDetailPage.qml:211 ../qml/ArchivedPage.qml:175
+#: ../qml/FavoritesPage.qml:194 ../qml/GalleryPage.qml:269
+#: ../qml/LocationDetailPage.qml:173 ../qml/PersonDetailPage.qml:186
+#: ../qml/SearchPage.qml:257
+msgid "Trashing photos..."
+msgstr "Перенесення фото до смітника..."
+
+#: ../qml/AlbumSelectorPage.qml:38 ../qml/AlbumsPage.qml:41
+msgid "item"
+msgstr "елемент"
+
+#: ../qml/AlbumSelectorPage.qml:38 ../qml/AlbumsPage.qml:41
+msgid "items"
+msgstr "елементи"
+
+#: ../qml/AlbumSelectorPage.qml:40 ../qml/AlbumsPage.qml:43
+msgid "Shared"
+msgstr "Поширене"
+
+#: ../qml/AlbumSelectorPage.qml:57
+msgid "Select Album"
+msgstr "Оберіть альбом"
+
+#: ../qml/AlbumSelectorPage.qml:82
+msgid "Adding photos to album..."
+msgstr "Додавання фото до альбому..."
+
+#: ../qml/AlbumSelectorPage.qml:82 ../qml/AlbumsPage.qml:108
+msgid "Loading albums..."
+msgstr "Завантаження альбомів..."
+
+#: ../qml/AlbumSelectorPage.qml:100 ../qml/AlbumsPage.qml:126
+msgid "Search albums"
+msgstr "Пошук альбомів"
+
+#: ../qml/AlbumSelectorPage.qml:101 ../qml/AlbumsPage.qml:127
+msgid "No albums"
+msgstr "Альбомів немає"
+
+#: ../qml/AlbumsPage.qml:60 ../qml/GalleryPage.qml:174
+msgid "Albums"
+msgstr "Альбоми"
+
+#: ../qml/AlbumsPage.qml:75
+msgid "New Album"
+msgstr "Новий альбом"
+
+#: ../qml/AlbumsPage.qml:79
+msgid "Album Name"
+msgstr "Назва альбому"
+
+#: ../qml/AlbumsPage.qml:80
+msgid "Enter album name"
+msgstr "Введіть назву альбому"
+
+#: ../qml/AlbumsPage.qml:85
+msgid "Cancel"
+msgstr "Скасувати"
+
+#: ../qml/AlbumsPage.qml:90
+msgid "Create"
+msgstr "Створити"
+
+#: ../qml/AlbumsPage.qml:147
+msgid "Add Album"
+msgstr "Додати альбом"
+
+#: ../qml/ArchivedPage.qml:28 ../qml/LibraryPage.qml:42
+#: ../qml/LibraryPage.qml:67
+msgid "Archived"
+msgstr "Заархівовано"
+
+#: ../qml/ArchivedPage.qml:45
+msgid "Loading archived photos..."
+msgstr "Завантаження архівних фото..."
+
+#: ../qml/ArchivedPage.qml:145 ../qml/PhotoDetail.qml:227
+msgid "Unarchive"
+msgstr "Розархівувати"
+
+#: ../qml/ArchivedPage.qml:151
+msgid "Unarchiving photos..."
+msgstr "Розархівування фото..."
+
+#: ../qml/ConfigurationPage.qml:28
+msgid "Configuration"
+msgstr "Конфігурація"
+
+#: ../qml/ConfigurationPage.qml:57
+msgid "Clearing cache..."
+msgstr "Очищення кешу..."
+
+#: ../qml/ConfigurationPage.qml:81
+msgid "Immich"
+msgstr "Immich"
+
+#: ../qml/ConfigurationPage.qml:84
+msgid "Clear All Cache"
+msgstr "Очистити весь кеш"
+
+#: ../qml/ConfigurationPage.qml:99
+msgid "Logout"
+msgstr "Вийти"
+
+#: ../qml/ConfigurationPage.qml:110
+msgid "Misc"
+msgstr "Різне"
+
+#: ../qml/ConfigurationPage.qml:113
+msgid "Send crash logs"
+msgstr "Надіслати журнали збою"
+
+#: ../qml/ConfigurationPage.qml:114
+msgid "Send anonymous crash reports"
+msgstr "Надіслати анонімні звіти про збої"
+
+#: ../qml/DeletedPhotosPage.qml:28
+msgid "Deleted Photos"
+msgstr "Видалені фото"
+
+#: ../qml/DeletedPhotosPage.qml:45
+msgid "Loading deleted photos..."
+msgstr "Завантаження видалених фото..."
+
+#: ../qml/DeletedPhotosPage.qml:145 ../qml/PhotoDetail.qml:255
+msgid "Restore"
+msgstr "Відновити"
+
+#: ../qml/DeletedPhotosPage.qml:151
+msgid "Restoring photos..."
+msgstr "Відновлення фото..."
+
+#: ../qml/DeletedPhotosPage.qml:169 ../qml/PhotoDetail.qml:269
+msgid "Delete"
+msgstr "Видалити"
+
+#: ../qml/DeletedPhotosPage.qml:175
+msgid "Permanently deleting photos..."
+msgstr "Остаточне видалення фото..."
+
+#: ../qml/FavoritesPage.qml:30 ../qml/LibraryPage.qml:38
+#: ../qml/LibraryPage.qml:64
+msgid "Favorites"
+msgstr "Улюблене"
+
+#: ../qml/FavoritesPage.qml:45
+msgid "Loading favorites..."
+msgstr "Завантаження улюбленого..."
+
+#: ../qml/FavoritesPage.qml:145 ../qml/GalleryPage.qml:220
+#: ../qml/LocationDetailPage.qml:124 ../qml/PersonDetailPage.qml:137
+#: ../qml/SearchPage.qml:208
+msgid "Add to Album"
+msgstr "Додати до альбому"
+
+#: ../qml/GalleryPage.qml:30 ../qml/Main.qml:61 picpocket.desktop.in.h:1
+msgid "PicPocket"
+msgstr "PicPocket"
+
+#: ../qml/GalleryPage.qml:51
+msgid "Loading photos..."
+msgstr "Завантаження фото..."
+
+#: ../qml/GalleryPage.qml:185 ../qml/LibraryPage.qml:9
+msgid "Library"
+msgstr "Бібліотека"
+
+#: ../qml/GalleryPage.qml:196
+msgid "Upload"
+msgstr "Вивантажити"
+
+#: ../qml/GalleryPage.qml:306
+msgid "Select Photos to Upload"
+msgstr "Оберіть фото для вивантаження"
+
+#: ../qml/GalleryPage.qml:324
+msgid "Uploading photos..."
+msgstr "Вивантаження фото..."
+
+#: ../qml/GalleryPage.qml:327
+msgid "Upload Failed"
+msgstr "Вивантаження не вдалося"
+
+#: ../qml/GalleryPage.qml:327
+msgid "Upload Successful"
+msgstr "Вивантаження успішне"
+
+#: ../qml/GalleryPage.qml:328
+msgid "Upload completed"
+msgstr "Вивантаження завершене"
+
+#: ../qml/GalleryPage.qml:361
+msgid "OK"
+msgstr "ОК"
+
+#: ../qml/LibraryPage.qml:26 ../qml/LibraryPage.qml:55 ../qml/SearchPage.qml:28
+#: ../qml/SearchPage.qml:99 ../qml/ut_components/ActionableList.qml:107
+#: ../qml/ut_components/CardList.qml:84
+msgid "Search"
+msgstr "Пошук"
+
+#: ../qml/LibraryPage.qml:27
+msgid "Search your entire library"
+msgstr "Пошук по всій бібліотеці"
+
+#: ../qml/LibraryPage.qml:30 ../qml/LibraryPage.qml:58 ../qml/PeoplePage.qml:11
+msgid "People"
+msgstr "Люди"
+
+#: ../qml/LibraryPage.qml:31
+msgid "Browse photos by people"
+msgstr "Перегляд фото за особами"
+
+#: ../qml/LibraryPage.qml:34 ../qml/LibraryPage.qml:61
+msgid "Places"
+msgstr "Місця"
+
+#: ../qml/LibraryPage.qml:35
+msgid "Browse photos by location"
+msgstr "Перегляд фото за місцями"
+
+#: ../qml/LibraryPage.qml:39
+msgid "Your favorite photos"
+msgstr "Ваші улюблені фото"
+
+#: ../qml/LibraryPage.qml:43
+msgid "Hidden from main view"
+msgstr "Приховано з основного перегляду"
+
+#: ../qml/LibraryPage.qml:47
+msgid "Deleted items"
+msgstr "Видалені елементи"
+
+#: ../qml/LibraryPage.qml:51
+msgid "No library options available"
+msgstr "Немає доступних налаштувань бібліотеки"
+
+#: ../qml/LocationDetailPage.qml:17
+msgid "Location"
+msgstr "Розташування"
+
+#: ../qml/LocationDetailPage.qml:34
+msgid "Loading location photos..."
+msgstr "Завантаження фото з розташуваннями..."
+
+#: ../qml/LocationDetailPage.qml:68
+msgid "Error loading location photos"
+msgstr "Помилка завантаження фото з локаціями"
+
+#: ../qml/LocationsPage.qml:11
+msgid "Locations"
+msgstr "Розташування"
+
+#: ../qml/LocationsPage.qml:38
+msgid "Loading locations..."
+msgstr "Завантаження розташувань..."
+
+#: ../qml/LocationsPage.qml:65
+msgid "No locations found"
+msgstr "Розташування не знайдено"
+
+#: ../qml/Main.qml:94
+msgid "Sign in to Immich"
+msgstr "Вхід до Immich"
+
+#: ../qml/Main.qml:104
+msgid "Sign In"
+msgstr "Вхід"
+
+#: ../qml/Main.qml:109
+msgid "Server URL"
+msgstr "URL сервера"
+
+#: ../qml/Main.qml:110
+msgid "https://your-server.com"
+msgstr "https://your-server.com"
+
+#: ../qml/Main.qml:113
+msgid "Please enter a valid URL"
+msgstr "Вкажіть, будь ласка, дійсний URL"
+
+#: ../qml/Main.qml:118
+msgid "Email"
+msgstr "Е-пошта"
+
+#: ../qml/Main.qml:119
+msgid "user@example.com"
+msgstr "user@example.com"
+
+#: ../qml/Main.qml:122
+msgid "Please enter a valid email"
+msgstr "Вкажіть, будь ласка, дійсну е-пошту"
+
+#: ../qml/Main.qml:127
+msgid "Password"
+msgstr "Пароль"
+
+#: ../qml/Main.qml:128
+msgid "Enter your password"
+msgstr "Вкажіть свій пароль"
+
+#: ../qml/PeoplePage.qml:38
+msgid "Loading people..."
+msgstr "Завантаження осіб..."
+
+#: ../qml/PeoplePage.qml:44
+msgid "No name"
+msgstr "Без імені"
+
+#: ../qml/PeoplePage.qml:65
+msgid "No people found"
+msgstr "Особи не знайдені"
+
+#: ../qml/PersonDetailPage.qml:17
+msgid "Person"
+msgstr "Особа"
+
+#: ../qml/PersonDetailPage.qml:34
+msgid "Loading person photos..."
+msgstr "Завантаження фото осіб..."
+
+#: ../qml/PersonDetailPage.qml:68
+msgid "Error loading person photos"
+msgstr "Помилка завантаження фото осіб"
+
+#: ../qml/PhotoDetail.qml:110
+msgid "Immich photos viewed today"
+msgstr "Переглянуті сьогодні фото Immich"
+
+#: ../qml/PhotoDetail.qml:111
+msgid "No Immich photos viewed today"
+msgstr "Переглянутих сьогодні фото Immich немає"
+
+#: ../qml/PhotoDetail.qml:198 ../qml/PhotoDetail.qml:331
+msgid "Share"
+msgstr "Поділитися"
+
+#: ../qml/PhotoDetail.qml:216
+msgid "Favorite"
+msgstr "Улюблене"
+
+#: ../qml/SearchPage.qml:49
+msgid "Searching..."
+msgstr "Пошук..."
+
+#: ../qml/SearchPage.qml:91
+msgid "Enter search query..."
+msgstr "Введіть пошуковий запит..."
+
+#: ../qml/SearchPage.qml:117
+msgid "Results for: %1"
+msgstr "Результати на: %1"
+
+#: ../qml/SearchPage.qml:141
+msgid "No results found"
+msgstr "Результатів немає"
+
+#: ../qml/SearchPage.qml:149
+msgid "Enter a search query to begin"
+msgstr "Для початку введіть пошуковий запит"
+
+#: ../qml/SearchPage.qml:190
+msgid "Clear"
+msgstr "Очистити"
+
+#: ../qml/ut_components/ActionableList.qml:109
+#: ../qml/ut_components/CardList.qml:82
+msgid "No items"
+msgstr "Порожньо"
+
+#: ../qml/ut_components/AppHeader.qml:78
+msgid "Back"
+msgstr "Назад"
+
+#: ../qml/ut_components/AppHeader.qml:94
+msgid "Settings"
+msgstr "Налаштування"
+
+#: ../qml/ut_components/Form.qml:81
+msgid "Submit"
+msgstr "Надіслати"
+
+#: ../qml/ut_components/ImageViewer.qml:388
+msgid "Failed to load image"
+msgstr "Помилка завантаження зображення"
+
+#: ../qml/ut_components/ImageViewer.qml:483
+msgid "No image to display"
+msgstr "Немає картинки для показу"
+
+#: ../qml/ut_components/InputField.qml:91
+msgid "Invalid input"
+msgstr "Хибне введення"
+
+#: ../qml/ut_components/InputField.qml:166
+msgid "This field is required"
+msgstr "Це поле обов'язкове"
+
+#: ../qml/ut_components/VideoViewer.qml:438
+msgid "Failed to load video"
+msgstr "Помилка завантаження відео"
+
+#: ../qml/ut_components/VideoViewer.qml:640
+msgid "No video to display"
+msgstr "Немає відео для показу"
