@@ -1,0 +1,154 @@
+name: Sync translations to Forgejo
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'po/*.po'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: sync-to-forgejo-master
+  cancel-in-progress: false
+
+env:
+  FORGEJO_HOST: git.brennoflavio.com.br
+  FORGEJO_API_URL: https://git.brennoflavio.com.br/api/v1
+  FORGEJO_REPO: brennoflavio/picpocket
+  FORGEJO_BASE_BRANCH: master
+
+jobs:
+  sync-to-forgejo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout translation repository
+        uses: actions/checkout@v4
+
+      - name: Clone Forgejo repository
+        env:
+          FORGEJO_USER: ${{ secrets.FORGEJO_USER }}
+          FORGEJO_TOKEN: ${{ secrets.FORGEJO_TOKEN }}
+        run: |
+          set -eu
+          git clone --branch "${FORGEJO_BASE_BRANCH}" --single-branch "https://${FORGEJO_USER}:${FORGEJO_TOKEN}@${FORGEJO_HOST}/${FORGEJO_REPO}.git" forgejo
+
+      - name: Sync PO files
+        run: |
+          set -eu
+
+          found_po=false
+          for file in po/*.po; do
+            if [ ! -e "$file" ]; then
+              continue
+            fi
+
+            found_po=true
+            break
+          done
+
+          if [ "$found_po" = false ]; then
+            echo "No PO files found in source repository"
+            exit 1
+          fi
+
+          mkdir -p forgejo/po
+
+          for target in forgejo/po/*.po; do
+            if [ ! -e "$target" ]; then
+              continue
+            fi
+
+            name=$(basename "$target")
+            if [ ! -e "po/$name" ]; then
+              rm "$target"
+            fi
+          done
+
+          for source in po/*.po; do
+            cp "$source" "forgejo/po/$(basename "$source")"
+          done
+
+      - name: Commit and push branch
+        id: sync
+        working-directory: forgejo
+        env:
+          FORGEJO_USER: ${{ secrets.FORGEJO_USER }}
+          FORGEJO_TOKEN: ${{ secrets.FORGEJO_TOKEN }}
+        run: |
+          set -eu
+
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "No PO changes to sync"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          branch="sync/weblate-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+
+          git checkout -b "$branch"
+          git config user.name "PickPocket Sync Bot"
+          git config user.email "contato@brennoflavio.com.br"
+          git add -A po
+          git commit -m "Sync translations from Weblate"
+          git push origin "HEAD:${branch}"
+
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+          echo "branch=${branch}" >> "$GITHUB_OUTPUT"
+
+      - name: Open Forgejo pull request
+        if: steps.sync.outputs.changed == 'true'
+        env:
+          FORGEJO_TOKEN: ${{ secrets.FORGEJO_TOKEN }}
+          SYNC_BRANCH: ${{ steps.sync.outputs.branch }}
+        run: |
+          set -eu
+          python3 - <<'PY'
+          import json
+          import os
+          import sys
+          import urllib.error
+          import urllib.request
+
+          api_url = os.environ["FORGEJO_API_URL"].rstrip("/")
+          repo = os.environ["FORGEJO_REPO"]
+          base_branch = os.environ["FORGEJO_BASE_BRANCH"]
+          sync_branch = os.environ["SYNC_BRANCH"]
+          sha = os.environ["GITHUB_SHA"][:7]
+          run_url = f"{os.environ['GITHUB_SERVER_URL']}/{os.environ['GITHUB_REPOSITORY']}/actions/runs/{os.environ['GITHUB_RUN_ID']}"
+
+          payload = {
+              "base": base_branch,
+              "head": sync_branch,
+              "title": f"Sync translations from Weblate ({sha})",
+              "body": "\n".join([
+                  "Automated translation sync from picpocket-l10n.",
+                  "",
+                  f"- Source commit: `{os.environ['GITHUB_SHA']}`",
+                  f"- GitHub Actions run: {run_url}",
+              ]),
+          }
+
+          request = urllib.request.Request(
+              f"{api_url}/repos/{repo}/pulls",
+              data=json.dumps(payload).encode(),
+              headers={
+                  "Authorization": f"token {os.environ['FORGEJO_TOKEN']}",
+                  "Content-Type": "application/json",
+              },
+              method="POST",
+          )
+
+          try:
+              with urllib.request.urlopen(request) as response:
+                  print(response.read().decode())
+          except urllib.error.HTTPError as error:
+              body = error.read().decode()
+              lowered = body.lower()
+              if error.code in (409, 422) and ("already exists" in lowered or "has already been created" in lowered):
+                  print(body)
+                  sys.exit(0)
+              raise
+          PY
